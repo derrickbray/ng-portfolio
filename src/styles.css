@@ -1,8 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &:after,
+  &:before {
+    box-sizing: inherit;
+  }
+}
+
 body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .container {
   max-width: 65rem;
+  margin: 0 auto;
 }
