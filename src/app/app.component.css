@@ -1,3 +1,19 @@
+
+.modal {
+  position: relative;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #999;
+  filter: opacity(0.4);
+  z-index: 5;
+}
+
+
 .nav-content {
   display: flex;
   justify-content: flex-end;
@@ -15,6 +31,7 @@
   min-width: 15.5rem;
   margin: 0 auto;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .grid__item:hover .grid__item-pic {

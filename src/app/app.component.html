@@ -1,6 +1,8 @@
 <div class="modal">
-  <div class="modal-card">
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
 
+    </div>
   </div>
 </div>
 
@@ -22,11 +24,14 @@
 
 <section class="grid">
 
-  <div class="grid__item">
-    <img class="grid__item-pic" src="assets/knowthis1.png" alt="">
+  <div class="grid__item"
+  *ngFor="let site of projects"
+  (click)="runModal(site.title, site.img, site.description, site.url)">
+    <img class="grid__item-pic" src="{{site.img}}" alt="">
     <div class="grid__item-content">
-      <h3 class="grid__item-content-title">Podcast Courses</h3>
-      <div class="grid__item-content-body">This is a site that I made to make podcast playlists. It also includes info on interesting people and ideas. Be gentle, it's a work in progress.</div>
+      <h3 class="grid__item-content-title">{{site.title}}</h3>
+      <div class="grid__item-content-body">{{site.description}}</div>
     </div>
   </div>
+
 </section>

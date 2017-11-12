@@ -10,7 +10,7 @@ export class AppComponent {
     {
       title: 'Safety Net',
       img: 'assets/safetynet1.png',
-      url: 'https://divsafetynet.herokuapp.com/',
+      url: 'https://asafetynet.herokuapp.com/',
       description: 'The Safety Net is an app that helps people in need connect with those who are willing to help. It was build using EmberJS and NodeJS with Shaun Willis. The free server takes a min to load.'
     },
     {
@@ -61,6 +61,11 @@ export class AppComponent {
       url: 'http://knowthis.website/',
       description: 'This is a site that I made to make podcast playlists. It also includes info on interesting people and ideas. Be gentle, it is a work in progress.'
     },
+  ];
 
-  ]
+  runModal(title, img, des, url) {
+    console.log(title, img, des, url);
+    let overlay = document.getElementById('modal-overlay');
+    overlay.style.display = 'block';
+  };
 }
