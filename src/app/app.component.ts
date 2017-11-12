@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = [];
+  img = [];
+  des = [];
+  url = [];
+
   projects = [
     {
       title: 'Safety Net',
@@ -65,7 +70,21 @@ export class AppComponent {
 
   runModal(title, img, des, url) {
     console.log(title, img, des, url);
+    this.title = title;
+    this.img = img;
+    this.des = des;
+    this.url = url;
+
     let overlay = document.getElementById('modal-overlay');
+    let card = document.getElementById('modal-card');
     overlay.style.display = 'block';
+    card.style.display = 'block';
+  };
+
+  removeModal() {
+    let overlay = document.getElementById('modal-overlay');
+    let card = document.getElementById('modal-card');
+    overlay.style.display = 'none';
+    card.style.display = 'none';
   };
 }
