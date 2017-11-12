@@ -9,7 +9,8 @@
       <img src="{{img}}" class="modal-img">
       <div class="modal-description">{{des}}</div>
       <div class="btn-box">
-          <a href="{{url}}" class="btn">See the live site</a>
+        <a href="{{url}}" class="btn">See the Live Site</a>
+        <a href="{{github}}" *ngIf="github" class="btn">See the Code</a>
       </div>
     </div>
   </div>
@@ -32,15 +33,15 @@
 </section>
 
 <div class="container">
-<section class="grid">
+  <section class="grid">
     <div class="grid__item"
     *ngFor="let site of projects"
-    (click)="runModal(site.title, site.img, site.description, site.url)">
+    (click)="runModal(site.title, site.img, site.description, site.url, site.github)">
       <img class="grid__item-pic" src="{{site.img}}" alt="">
       <div class="grid__item-content">
         <h3 class="grid__item-content-title">{{site.title}}</h3>
         <div class="grid__item-content-body">{{site.description}}</div>
       </div>
     </div>
-</section>
+  </section>
 </div>
