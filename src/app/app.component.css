@@ -49,7 +49,7 @@
   position: relative;
   flex-grow: 1;
   width: calc(100% / 3);
-  min-width: 15.5rem;
+  min-width: 18rem;
   margin: 0 auto;
   overflow: hidden;
   cursor: pointer;
@@ -68,7 +68,6 @@
 .grid__item-content {
   position: absolute;
   top: 10%;
-  flex-basis: 100%;
   margin: 0;
   padding: 0.5rem;
   color: white;
