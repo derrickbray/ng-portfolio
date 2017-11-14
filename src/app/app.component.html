@@ -1,16 +1,18 @@
 <div class="modal">
-  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal-overlay" id="modal-overlay">
+  </div>
+
   <div class="modal-card" id="modal-card">
     <div class="modal-item">
       <div class="modal-top">
-        <h2 class="modal-title">{{title}}</h2>
-        <div class="modal-exit" (click)="removeModal()">Exit</div>
+        <h2 class="modal-title">{{ title }}</h2>
+        <h2 class="modal-exit" (click)="removeModal()">X</h2>
       </div>
-      <img src="{{img}}" class="modal-img">
-      <div class="modal-description">{{des}}</div>
+      <img src="{{ img }}" class="modal-img">
+      <div class="modal-description">{{ des }}</div>
       <div class="btn-box">
-        <a href="{{url}}" class="btn">See the Live Site</a>
-        <a href="{{github}}" *ngIf="github" class="btn">See the Code</a>
+        <a href="{{ url }}" class="btn">See the Live Site</a>
+        <a href="{{ github }}" *ngIf="github" class="btn">See the Code</a>
       </div>
     </div>
   </div>
@@ -37,10 +39,10 @@
     <div class="grid__item"
     *ngFor="let site of projects"
     (click)="runModal(site.title, site.img, site.description, site.url, site.github)">
-      <img class="grid__item-pic" src="{{site.img}}" alt="">
+      <img class="grid__item-pic" src="{{ site.img }}" alt="">
       <div class="grid__item-content">
-        <h3 class="grid__item-content-title">{{site.title}}</h3>
-        <div class="grid__item-content-body">{{site.description}}</div>
+        <h3 class="grid__item-content-title">{{ site.title }}</h3>
+        <div class="grid__item-content-body">{{ site.description }}</div>
       </div>
     </div>
   </section>
