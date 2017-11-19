@@ -85,16 +85,12 @@ export class AppComponent {
     this.url = url;
     this.github = github;
 
-    let overlay = document.getElementById('modal-overlay');
-    let card = document.getElementById('modal-card');
-    overlay.style.display = 'block';
-    card.style.display = 'block';
+    document.getElementById('modal-overlay').style.display = 'block';
+    document.getElementById('modal-card').style.display = 'block';
   };
 
   removeModal() {
-    let overlay = document.getElementById('modal-overlay');
-    let card = document.getElementById('modal-card');
-    overlay.style.display = 'none';
-    card.style.display = 'none';
+    document.getElementById('modal-overlay').style.display = 'none';
+    document.getElementById('modal-card').style.display = 'none';
   };
 }
